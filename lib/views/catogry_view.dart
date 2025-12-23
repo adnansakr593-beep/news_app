@@ -10,12 +10,18 @@ class CatogryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold
     (
-      body: CustomScrollView
-      (
-        slivers: 
-        [
-           NewListViewBuilder(category: category,),
-        ],
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal:  25),
+          child: CustomScrollView
+          (
+            slivers: 
+            [
+               NewListViewBuilder(category: category,),
+            ],
+          ),
+        ),
       ),
     );
   }

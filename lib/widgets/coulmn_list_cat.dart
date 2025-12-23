@@ -2,7 +2,7 @@
 import 'package:news_app/models/articles_model.dart';
 
 class Newstile extends StatelessWidget {
-  Newstile({super.key, required this.articlesListModel});
+  const Newstile({super.key, required this.articlesListModel});
 
   final ArticlesListModel articlesListModel;
 
