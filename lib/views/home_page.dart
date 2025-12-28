@@ -11,39 +11,36 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32,),
-          child: CustomScrollView(
-            physics: const BouncingScrollPhysics(),
-            slivers: [
-
-              SliverToBoxAdapter(child:const SizedBox(height: 15,) ,),
-              SliverToBoxAdapter(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text(
-                      "News ",
-                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "Cloud",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.orange,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SliverToBoxAdapter(child:const SizedBox(height: 15,) ,),
+        child: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
+          slivers: [
         
-              SliverToBoxAdapter(child: Catogry_list_view()),
-              SliverToBoxAdapter(child: SizedBox(height: 24)),
-              NewListViewBuilder(category: 'general'),
-            ],
-          ),
+            SliverToBoxAdapter(child:const SizedBox(height: 15,) ,),
+            SliverToBoxAdapter(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    "News ",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "Cloud",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.orange,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SliverToBoxAdapter(child:const SizedBox(height: 15,) ,),
+                
+            SliverToBoxAdapter(child: Catogry_list_view()),
+            SliverToBoxAdapter(child: SizedBox(height: 24)),
+            NewListViewBuilder(category: 'general'),
+          ],
         ),
       ),
     );

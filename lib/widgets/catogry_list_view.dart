@@ -11,8 +11,8 @@ class Catogry_list_view extends StatelessWidget {
   // ignore: non_constant_identifier_names
   List<RowListModel>row_model=
   [
-    RowListModel
-    (image:'assets/images/business.avif' , text: 'Business'),
+    // RowListModel
+    // (image:'assets/images/business.avif' , text: 'Business'),
     RowListModel
     (
       image:'assets/images/entertaiment.avif',
@@ -53,16 +53,19 @@ class Catogry_list_view extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 95,
-      child: ListView.builder
-      (
-        itemCount: row_model.length,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context,index)
-        {
-          return  CatogryWedgit(modelasset: row_model[index],);
-        }
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: SizedBox(
+        height: 95,
+        child: ListView.builder
+        (
+          itemCount: row_model.length,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context,index)
+          {
+            return  CatogryWedgit(modelasset: row_model[index],);
+          }
+        ),
       ),
     );
   }

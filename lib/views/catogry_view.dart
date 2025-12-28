@@ -12,15 +12,12 @@ class CatogryView extends StatelessWidget {
     (
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal:  25),
-          child: CustomScrollView
-          (
-            slivers: 
-            [
-               NewListViewBuilder(category: category,),
-            ],
-          ),
+        child: CustomScrollView
+        (
+          slivers: 
+          [
+             NewListViewBuilder(category: category,),
+          ],
         ),
       ),
     );
